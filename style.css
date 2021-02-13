@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0px;
+}
+.body-light {
+    color:rgb(40, 41, 43);
+    background: rgb(239, 239, 243);
+}
+.body-dark {
+    color:rgb(239, 239, 243);
+    background: rgb(40, 41, 43);
+}
+
+.navbar {
+    padding: 10px 20px;
+    height: 45px;
+}
+.nav-image {
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    left: 5px;
+}
+.nav-image-dark {
+    background: url("../assets/logo.png") no-repeat;
+    background-size:contain;
+    background-position: left;
+}
+.nav-image-light {
+    background: url("../assets/logo-light.png") no-repeat;
+    background-size:contain;
+    background-position: left;
+}
+.nav-btn {
+    background-size: contain;
+    background-position: center;
+    width: 7%;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    top: 25px;
+}
+.dark-btn {
+    background: url("../assets/icon.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.light-btn {
+    background: url("../assets/icon-light.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.nav-list {
+    list-style: none;
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    padding: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 0px;
+    top:54px;
+    z-index: 1;
+}
+.nav-list.active {
+    display: block;
+}
+.nav-links {
+    display: block;
+    text-decoration: none;
+    margin: 5px 20px;
+}
+.nav-links:hover {
+    color:rgb(49, 83, 158);
+}
+.nav-light {
+    color: rgb(40, 41, 43);
+    background:rgb(219, 219, 224);
+}
+.nav-dark {
+    color: rgb(229, 229, 234);
+    background: rgb(40, 41, 43);
+}
+
+.slideshow-container {
+    background: rgb(40, 41, 43);
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 250px;
+}
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+.slide.active {
+    display: block;
+}
+.prev, .next {
+    color:rgb(229, 229, 234);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s;
+    border-radius: 3px;
+}
+.next {
+    right: 0;
+}
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.1)
+}
+.slide-image {
+    background: url("../media/Lighthouse.jpg") no-repeat;
+    background-position: center !important;
+    background-size: cover !important;
+    height: 250px;
+    width: 100%;
+    margin: 0px;
+}
+.slide-text {
+    width: 100%;
+    display: block;
+    color:rgb(239, 239, 243);
+    height: 250px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+.slide-caption {
+    font-size: 18px;
+    padding: 3px 5px;
+    display: block;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+.card {
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px;
+    background: rgb(229, 229, 234);
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 224);
+    transition: .3s;
+}
+.card-title.click {
+    background:rgb(219, 219, 224)
+}
+.title-text {
+    width: 90%;
+    display: inline-block;
+}
+.read-more {
+    float: right;
+    margin-right: 5px;
+    margin-left: 1px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: .3s;
+}
+.read-more.click {
+    transform: rotate(270deg);
+}
+.card-date {
+    font-size: 14px;
+    font-weight: 400;
+}
+.card-image {
+    width: 49%;
+    margin: .5%;
+    cursor: pointer;
+}
+.video {
+    width: 49%;
+    margin: .5%;
+}
+.popup {
+    display: none;
+    background:rgba(40, 41, 43, .4);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: none;
+}
+.popup section {
+    position: relative;
+    width: 100%;
+}
+.full-img {
+    width: 98%;
+    margin: 0% 1%;
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+}
+.card-body {
+    padding: 7px;
+    /* text-indent: 20px; */
+    background:rgb(229, 229, 234);
+    display:none;
+    border-radius: 0px 0px 3px 3px;
+    position: relative;
+}
+#author {
+    text-align: right;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.footer {
+    width: 100%;
+    min-height: 60px;
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-list {
+    font-size: 15px;
+    margin: 0px;
+    list-style: none;
+    padding: 10px 10px;
+}
+.footer-list li {
+    margin: 5px;
+}
+.footer-links {
+    text-decoration: none;
+}
+.footer-icons {
+    background-size: contain !important;
+    background-position: left !important;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+.footer-light {
+    background:rgb(229, 229, 234);
+    color:rgb(40, 41, 43);
+}
+.footer-dark {
+    color:rgb(229, 229, 234);
+    background:rgb(40, 41, 43);
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 2.5vh;
+    }
+    .navbar {
+        height: 8vh;
+    }
+    .nav-image {
+        margin-left: 2vh;
+        width: 10vh;
+        height: 8vh;
+    }
+    .nav-list {
+        display: flex;
+        position: initial;
+        float: right;
+        width: auto;
+        padding: 10px 0px;
+        margin: 0px;
+    }
+    .nav-links {
+        display: inline;
+        text-decoration: none;
+        margin: 0vh 2vh;
+        font-size: 3vh;
+    }
+    .nav-btn {
+        display: none;
+    }
+    
+    .slideshow-container, .slide-image {
+        height: 90vh;
+    }
+    .slide-image{
+        font-size: 30px;
+    }
+    .slide-caption {
+        font-size: 6vh;
+        padding: 1vh 3vh;
+    }
+    .prev, .next {
+        padding: 3vh;
+        font-size: 4vh;
+    }
+
+    section {
+        margin: auto;
+        width: 65%;
+    }
+    .section-title {
+        font-size:5vh;
+        padding: 3vh 0vh;
+    }
+    .article-title {
+        font-size: 25px;
+    }
+    .article-prgrph {
+        font-size: 18px;
+    }
+    .read-more {
+        margin-right: 2vh;
+        margin-left: 1vh;
+    }
+
+    .card {
+        width: 75%;
+        font: 34px;
+    }
+    .card-title {
+        font-size: 3.5vh;
+    }
+    .card-date {
+        font-size: 2.5vh;
+    }
+    .card-image {
+        width: 32%;
+        margin: 0.666%;
+    }
+    .full-img {
+        width: 75%;
+        left: 12.5%;
+    }
+    .video {
+        width: 32%;
+        margin: .666%;
+    }
+
+    .footer {
+        margin-top: 5vh;
+    }
+    .footer-list {
+        font-size: 2.5vh;
+        list-style: none;
+        padding: 2vh;
+        margin: 0vh;
+    }
+    .footer-list li {
+        margin: 1vh;
+    }
+    .footer-icons {
+        height: 5vh;
+        width: 5vh;
+    }
+}
